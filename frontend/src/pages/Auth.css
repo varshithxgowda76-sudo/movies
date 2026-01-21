@@ -1,0 +1,35 @@
+.auth-container {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+    url("https://assets.nflxext.com/ffe/siteui/vlv3/6e8c5e6d.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-box {
+  background: rgba(0,0,0,.75);
+  padding: 40px;
+  width: 350px;
+  color: white;
+}
+
+.auth-box h1 {
+  margin-bottom: 20px;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 10px;
+  background: red;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
