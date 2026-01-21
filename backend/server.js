@@ -10,8 +10,14 @@ const PORT = process.env.PORT || 5000;
 
 
 app.use(cors({
-  origin: "*"
+  origin: [
+    "http://localhost:3000",
+    "https://movie-app.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
 }));
+
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 
