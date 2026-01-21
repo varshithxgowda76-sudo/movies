@@ -9,15 +9,16 @@ function MovieDetails() {
   const [rating, setRating] = useState(5);
 
   useEffect(() => {
-    fetchMovie();
-  }, []);
-
   const fetchMovie = async () => {
     const res = await axios.get(
       `https://api.themoviedb.org/3/movie/${id}?api_key=${TMDB_API_KEY}`
     );
     setMovie(res.data);
   };
+
+  fetchMovie();
+}, [id]);
+
 
   const addToWatchlist = async () => {
     await API.post("/movies/add", {
